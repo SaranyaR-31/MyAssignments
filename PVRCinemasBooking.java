@@ -25,18 +25,23 @@ public class PVRCinemasBooking {
 			//  driver.findElement(By.xpath("//div[@id='date']")).click();
 			  Thread.sleep(3000);
 		 
-			  driver.findElement(By.xpath("//span[text()='Tomorrow']")).click();
-			  driver.findElement(By.xpath("(//span[text()='SARIPODHA SANIVAARAM'])[2]")).click();
-			  driver.findElement(By.xpath("//span[text()='10:45 PM']")).click();
-			  driver.findElement(By.xpath("//span[text()='Book']")).click();
-			  driver.findElement(By.xpath("//button[text()='Accept']")).click();
-			  driver.findElement(By.xpath("//span[@id='CL.CLUB|I:6']")).click();
-			  driver.findElement(By.xpath("//button[text()='Proceed']")).click();
-			  driver.findElement(By.xpath("(//button[text()='ADD'])[3]")).click();
-			  driver.findElement(By.xpath("//button[text()='Proceed']")).click();
-			  
-					  
-}
-	
-	
+			  drivers.findElement(By.xpath("//span[text()='INOX The Marina Mall, OMR, Chennai']")).click();
+			 drivers.findElement(By.xpath("//span[text()='Tomorrow']")).click();
+			 drivers.findElement(By.xpath("(//span[text()='WHITE BIRD'])[2]")).click();
+			 drivers.findElement(By.xpath("//span[text()='06:50 PM']")).click();
+			 drivers.findElement(By.xpath("//button[@aria-label=\"Submit\"]")).click();
+			 drivers.findElement(By.xpath("//button[@class=\"sc-kLhKbu leNRZS reject-terms\"]")).click();
+			 drivers.findElement(By.xpath("//span[@id=\"CL.CLUB|F:11\"]")).click();
+			 drivers.findElement(By.xpath("//button[@class=\"sc-geXuza jdgnEx btn-proceeded\"]")).click();
+			 drivers.findElement(By.xpath("//div[@class=\"booking-summary\"]"));
+			 
+			 System.out.println("Your Ticket Total is rs.221.46");
+			 drivers.findElement(By.xpath("//button[@class=\"sc-geXuza jdgnEx btn-proceeded\"]")).click();
+			 drivers.findElement(By.xpath("(//button[text()='ADD'])[3]")).click();
+			 System.out.println("Your Grand Total is rs.831.46");
+			 drivers.findElement(By.xpath("(//button[text()='Proceed'])[2]")).click();
+			 drivers.close();
+	}
+
+
 	}
