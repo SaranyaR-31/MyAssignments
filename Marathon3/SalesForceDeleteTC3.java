@@ -12,12 +12,13 @@ public class SalesForceDeleteTC3 extends ProjectSpecificMethod{
 		//SELECT OPPORTUNITY
 				WebElement ClickOpportunity = driver.findElement(By.xpath("//span[text()='Opportunities']"));
 				driver.executeScript("arguments[0].click();",ClickOpportunity);
-				
+								
 				//Search for the Opportunity 'Salesforce Automation by name
-				WebElement SelectSaleForce = driver.findElement(By.xpath("//a[@title='Salesforce Automation by Saranya.R']"));
-				Actions SSF = new Actions(driver);
-				SSF.doubleClick(SelectSaleForce).perform();
-				Thread.sleep(3000);
+	                      driver.findElement(By.xpath("//input[@name='Opportunity-search-input']")).sendKeys("Saranya", Keys.ENTER);
+                               Thread.sleep(500);
+                               WebElement SelectSalesforce = driver.findElement(By.xpath("//a[@data-refid='recordId']"));
+     		               SelectSalesforce.click();
+
 				
 				//Click on the Dropdown icon and select 'Edit'
 				
