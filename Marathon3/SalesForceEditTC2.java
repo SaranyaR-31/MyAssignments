@@ -14,10 +14,15 @@ public class SalesForceEditTC2 extends ProjectSpecificMethod{
 		driver.executeScript("arguments[0].click();",ClickOpportunity);
 		
 		//Search for the Opportunity 'Salesforce Automation by name
-		WebElement SelectSaleForce = driver.findElement(By.xpath("//a[@title='Salesforce Automation by Saranya.R']"));
-		Actions SSF = new Actions(driver);
+                driver.findElement(By.xpath("//input[@name='Opportunity-search-input']")).sendKeys("Saranya", Keys.ENTER);
+		Thread.sleep(500);
+                WebElement SelectSalesforce = driver.findElement(By.xpath("//a[@data-refid='recordId']"));
+     		SelectSalesforce.click();
+		
+		/** Actions SSF = new Actions(driver);
 		SSF.doubleClick(SelectSaleForce).perform();
 		Thread.sleep(3000);
+		**/
 		
 		//Click on the Dropdown icon and select 'Edit'.
 		
